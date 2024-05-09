@@ -26,11 +26,49 @@ function getUserData(id){
             resolve(userData)
         },1000)
     });
-}
+};
 fetchAndLogUserData()
 
 
 //QUESTION 3
+async function callPerformTask(){
+    try{
+        await callPerformTask()
+        console.log(`The task was successful`)
+    }
+    catch (error){
+        console.log(`there was an error`, + error)
+    }
+}
+
+function performTask(){
+    return newPromise((resolve,reject)=>{
+        const isSuccess =true
+        setTimeout(()=>{
+        if(isSuccess){
+          resolve()
+        }
+else{
+    reject(`something went wrong`)
+}},1000);
+    })
+}
+callPerformTask();
+
+// //QUESTION 4
+// function unstableTask(taskname,failurePropablity){
+//     return newPromise((resolve,reject)=>{
+//         const randomNum = Math.random
+//     })
+// }
+
+
+
+
+
+
+
+
 
 
 
